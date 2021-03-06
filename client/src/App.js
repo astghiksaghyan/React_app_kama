@@ -1,15 +1,16 @@
 import './App.css';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Dialogs from './components/Dialogs/Dialogs';
+import Profiles from './components/Profiles/Profiles';
 const App = () => {
   return (
     <div className="app-wrapper">
-      <header className="header">
-        <img src='https://png.pngtree.com/png-clipart/20190604/original/pngtree-business-logo-design-png-image_915991.jpg'/>
-      </header>
-      <nav className="nav">
-        <div></div>
-      </nav>
-      <div className="content">
-        Main content
+      <Header />
+      <Navbar />
+      <div className="app-wrapper-content">
+        {/* <Dialogs /> */}
+        <Profiles />
       </div>
     </div>
   );
