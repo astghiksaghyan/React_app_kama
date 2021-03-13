@@ -1,3 +1,4 @@
+import {Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -6,12 +7,14 @@ import Profiles from './components/Profiles/Profiles';
 const App = () => {
   return (
     <div className="app-wrapper">
-      <Header />
-      <Navbar />
-      <div className="app-wrapper-content">
-        {/* <Dialogs /> */}
-        <Profiles />
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Navbar />
+        <div className="app-wrapper-content">
+            <Route path='/profiles' component={Profiles}/>
+            <Route path='/dialogs' component={Dialogs}/>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
