@@ -1,6 +1,7 @@
+import Posts from '../Posts/Posts';
 const Profiles = () => {
     return <div className="content">
-        Main content
+        <Posts></Posts>
     </div>
 }
 
