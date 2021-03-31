@@ -3,37 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-const postsData = [
-  {id: 1, message: 'Hy, how are you?', likesCount: 1},
-  {id: 2, message: 'It is my first post', likesCount: 5}
-];
-
-const dialogsData = [
-  {
-      id: 1,
-      name: 'Astghik',
-      message: 'Hi'
-  },
-  {
-      id: 2,
-      name: 'Davit',
-      message: 'How are you?'
-  },
-  {
-      id: 3,
-      name: 'Yerem',
-      message: 'Yo'
-  },
-  {
-      id: 4,
-      name: 'Poghos',
-      message: 'Bo'
-  }
-];
+import state from './state';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App postsData={postsData} dialogsData={dialogsData}/>
+    <App postsData={state.postsData} dialogsData={state.dialogsData}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
