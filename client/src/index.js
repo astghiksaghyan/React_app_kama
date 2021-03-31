@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './state';
+import { addPost } from './state';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App postsData={state.postsData} dialogsData={state.dialogsData}/>
+    <App state={state} addPost={addPost}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

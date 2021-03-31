@@ -1,7 +1,7 @@
 import Posts from '../Posts/Posts';
-const Profiles = ({postsData}) => {
+const Profiles = ({profilePage, addPost}) => {
     return <div className="content">
-        <Posts postsData={postsData}></Posts>
+        <Posts postsData={profilePage.posts} addPost={addPost}></Posts>
     </div>
 }
 

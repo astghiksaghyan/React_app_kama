@@ -4,15 +4,15 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Dialogs from './components/Dialogs/Dialogs';
 import Profiles from './components/Profiles/Profiles';
-const App = ({postsData, dialogsData}) => {
+const App = ({state, addPost}) => {
   return (
     <div className="app-wrapper">
       <BrowserRouter>
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-            <Route path='/profiles' render={() => <Profiles postsData={postsData}/>}/>
-            <Route path='/dialogs' render={() => <Dialogs dialogsData={dialogsData}/>}/>
+            <Route path='/profiles' render={() => <Profiles profilePage={state.profilePage} addPost={addPost}/>}/>
+            <Route path='/dialogs' render={() => <Dialogs dialogsData={state.dialogsData}/>}/>
         </div>
       </BrowserRouter>
     </div>
