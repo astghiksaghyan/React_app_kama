@@ -9,6 +9,7 @@ const Posts = ({postsData, addPost}) => {
     const textAreaRef = useRef(null);
     const addCurrentPost = () => {
         addPost(textAreaRef.current.value);
+        textAreaRef.current.value = '';
     };
     return (
         <div className={s.postsBlock}>
