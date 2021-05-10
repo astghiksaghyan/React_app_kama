@@ -39,13 +39,14 @@ import { renderEntireTree } from './render';
 export default state;
 
 
-export const addPost = (postMessage) => {
+export const addPost = () => {
     const newPost = {
         id: state.profilePage.posts.length + 1,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0
     }
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     renderEntireTree(state);
 };
 

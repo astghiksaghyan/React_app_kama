@@ -8,13 +8,11 @@ const Posts = ({postsData, newPostText, addPost, updateNewPostText}) => {
     });
     const textAreaRef = useRef(null);
     const addCurrentPost = () => {
-        addPost(textAreaRef.current.value);
-        textAreaRef.current.value = '';
+        addPost();
     };
     const onPostChange = () => {
         const value = textAreaRef.current.value;
         updateNewPostText(value);
-
     };
     return (
         <div className={s.postsBlock}>

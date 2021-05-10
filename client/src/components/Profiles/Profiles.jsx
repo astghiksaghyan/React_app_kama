@@ -6,7 +6,6 @@ const Profiles = ({profilePage, addPost, updateNewPostText}) => {
             newPostText={profilePage.newPostText}
             addPost={addPost}
             updateNewPostText={updateNewPostText}
-            state
         ></Posts>
     </div>
 }
