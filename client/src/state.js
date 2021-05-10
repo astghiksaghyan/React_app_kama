@@ -10,7 +10,8 @@ import { renderEntireTree } from './render';
             id: 2,
             message: 'It is my first post',
             likesCount: 5
-        }]
+        }],
+        newPostText: 'It-blala'
     },
     dialogsData: [{
             id: 1,
@@ -45,5 +46,10 @@ export const addPost = (postMessage) => {
         likesCount: 0
     }
     state.profilePage.posts.push(newPost);
+    renderEntireTree(state);
+};
+
+export const updateNewPostText = (postMessage) => {
+    state.profilePage.newPostText = postMessage;
     renderEntireTree(state);
 };
